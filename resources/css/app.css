@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the blog */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Prose styling for blog content */
+.prose {
+    color: #374151;
+    line-height: 1.75;
+}
+
+.prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #111827;
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.prose h1 {
+    font-size: 2.25em;
+    line-height: 1.1111111;
+}
+
+.prose h2 {
+    font-size: 1.875em;
+    line-height: 1.3333333;
+}
+
+.prose h3 {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.prose strong {
+    color: #111827;
+    font-weight: 600;
+}
+
+.prose blockquote {
+    font-weight: 500;
+    font-style: italic;
+    color: #111827;
+    border-left-width: 0.25rem;
+    border-left-color: #e5e7eb;
+    quotes: "\201C""\201D""\2018""\2019";
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    padding-left: 1em;
+}
+
+/* Dark mode prose - More specific selectors */
+.dark .prose,
+.dark .prose p,
+.dark .prose span,
+.dark .prose div:not(.bg-blue-100):not(.bg-green-100):not(.bg-red-100):not(.bg-yellow-100) {
+    color: #e5e7eb !important;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6,
+.dark .prose strong,
+.dark .prose b {
+    color: #f3f4f6 !important;
+}
+
+.dark .prose blockquote {
+    color: #f3f4f6 !important;
+    border-left-color: #374151;
+}
+
+/* Ensure all text elements are visible in dark mode */
+.dark .prose li,
+.dark .prose td,
+.dark .prose th,
+.dark .prose em,
+.dark .prose i,
+.dark .prose small,
+.dark .prose code {
+    color: #e5e7eb !important;
+}
+
+/* Override any Tailwind prose invert that might conflict */
+.dark .prose-invert {
+    color: #e5e7eb !important;
+}
+
+.dark .prose-invert p,
+.dark .prose-invert span,
+.dark .prose-invert div {
+    color: #e5e7eb !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .prose {
+        font-size: 0.875rem;
+    }
+    
+    .prose h1 {
+        font-size: 1.875rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.5rem;
+    }
+    
+    .prose h3 {
+        font-size: 1.25rem;
+    }
+}

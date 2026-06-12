@@ -1,0 +1,6 @@
+ - laravel 12, laravel/breeze, already setup
+- blog project
+- migrations: posts (title, body, category_id, featured_image, user_id), categories (name), comments (content, user_id, post_id)
+- featured_image should be direct picsum url
+- sample data: 2 dedicated users (alice, bob), 5 pre-defined categories, 20 posts, 40 comments
+- start from model, factory, migration
